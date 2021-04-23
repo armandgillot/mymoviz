@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
 /* NEW MOVIES */
 router.get('/new-movie', function (req, res, next) {
 
-  var requete = request("GET", "https://api.themoviedb.org/3/discover/movie?api_key=c20e85dfb96a6f227deaeb68fb253ba4&language=fr-FR&sort_by=popularity.desc&include_image_language=fr");
+  var requete = request("GET", "");
   var result = JSON.parse(requete.body);
 
   res.json({result : result.results});
@@ -22,7 +22,7 @@ router.get('/new-movie', function (req, res, next) {
 /* WISHLIST ADD */
 router.post('/wishlist-movie', async (req, res, next) => {
 
-  // var requete = request("GET", `https://api.themoviedb.org/3/movie/${req.body.idmovie}?api_key=c20e85dfb96a6f227deaeb68fb253ba4&language=fr-FR&include_image_language=fr`);
+  // var requete = request("GET", ``);
   // var result = JSON.parse(requete.body);
   // console.log(result);
   // var newWishlist = new wishlistModel({
